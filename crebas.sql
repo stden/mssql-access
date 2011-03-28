@@ -1,4 +1,4 @@
-/*==============================================================*/
+п»ї/*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2008                    */
 /* Created on:     20.03.2011 17:07:48                          */
 /*==============================================================*/
@@ -6,122 +6,122 @@
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Авиарейс') and o.name = 'FK_АВИАРЕЙС_REFERENCE_ТИП САМО')
-alter table Авиарейс
-   drop constraint "FK_АВИАРЕЙС_REFERENCE_ТИП САМО"
+   where r.fkeyid = object_id('РђРІРёР°СЂРµР№СЃ') and o.name = 'FK_РђР’РРђР Р•Р™РЎ_REFERENCE_РўРРџ РЎРђРњРћ')
+alter table РђРІРёР°СЂРµР№СЃ
+   drop constraint "FK_РђР’РРђР Р•Р™РЎ_REFERENCE_РўРРџ РЎРђРњРћ"
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Авиарейс') and o.name = 'FK_АВИАРЕЙС_КАКОЙ АВИ_АВИАКОМП')
-alter table Авиарейс
-   drop constraint "FK_АВИАРЕЙС_КАКОЙ АВИ_АВИАКОМП"
+   where r.fkeyid = object_id('РђРІРёР°СЂРµР№СЃ') and o.name = 'FK_РђР’РРђР Р•Р™РЎ_РљРђРљРћР™ РђР’Р_РђР’РРђРљРћРњРџ')
+alter table РђРІРёР°СЂРµР№СЃ
+   drop constraint "FK_РђР’РРђР Р•Р™РЎ_РљРђРљРћР™ РђР’Р_РђР’РРђРљРћРњРџ"
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Авиарейс') and o.name = 'FK_АВИАРЕЙС_КУДА_ГОРОД')
-alter table Авиарейс
-   drop constraint FK_АВИАРЕЙС_КУДА_ГОРОД
+   where r.fkeyid = object_id('РђРІРёР°СЂРµР№СЃ') and o.name = 'FK_РђР’РРђР Р•Р™РЎ_РљРЈР”Рђ_Р“РћР РћР”')
+alter table РђРІРёР°СЂРµР№СЃ
+   drop constraint FK_РђР’РРђР Р•Р™РЎ_РљРЈР”Рђ_Р“РћР РћР”
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('Авиарейс') and o.name = 'FK_АВИАРЕЙС_ОТКУДА_ГОРОД')
-alter table Авиарейс
-   drop constraint FK_АВИАРЕЙС_ОТКУДА_ГОРОД
+   where r.fkeyid = object_id('РђРІРёР°СЂРµР№СЃ') and o.name = 'FK_РђР’РРђР Р•Р™РЎ_РћРўРљРЈР”Рђ_Р“РћР РћР”')
+alter table РђРІРёР°СЂРµР№СЃ
+   drop constraint FK_РђР’РРђР Р•Р™РЎ_РћРўРљРЈР”Рђ_Р“РћР РћР”
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('Авиакомпания')
+           where  id = object_id('РђРІРёР°РєРѕРјРїР°РЅРёСЏ')
             and   type = 'U')
-   drop table Авиакомпания
+   drop table РђРІРёР°РєРѕРјРїР°РЅРёСЏ
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('Авиарейс')
+           where  id = object_id('РђРІРёР°СЂРµР№СЃ')
             and   type = 'U')
-   drop table Авиарейс
+   drop table РђРІРёР°СЂРµР№СЃ
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('Город')
+           where  id = object_id('Р“РѕСЂРѕРґ')
             and   type = 'U')
-   drop table Город
+   drop table Р“РѕСЂРѕРґ
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('"Тип самолёта"')
+           where  id = object_id('"РўРёРї СЃР°РјРѕР»С‘С‚Р°"')
             and   type = 'U')
-   drop table "Тип самолёта"
+   drop table "РўРёРї СЃР°РјРѕР»С‘С‚Р°"
 go
 
 /*==============================================================*/
-/* Table: Авиакомпания                                          */
+/* Table: РђРІРёР°РєРѕРјРїР°РЅРёСЏ                                          */
 /*==============================================================*/
-create table Авиакомпания (
-   Название             varchar(200)         not null,
-   constraint PK_АВИАКОМПАНИЯ primary key (Название)
+create table РђРІРёР°РєРѕРјРїР°РЅРёСЏ (
+   РќР°Р·РІР°РЅРёРµ             varchar(200)         not null,
+   constraint PK_РђР’РРђРљРћРњРџРђРќРРЇ primary key (РќР°Р·РІР°РЅРёРµ)
 )
 go
 
 /*==============================================================*/
-/* Table: Авиарейс                                              */
+/* Table: РђРІРёР°СЂРµР№СЃ                                              */
 /*==============================================================*/
-create table Авиарейс (
-   "Номер рейса"        int                  not null,
-   Авиакомпания         varchar(200)         null,
-   Откуда               varchar(200)         null,
-   Куда                 varchar(200)         null,
-   "Тип самолёта"       varchar(200)         null,
-   Вылет                datetime             null,
-   Прилёт               datetime             null,
-   constraint PK_АВИАРЕЙС primary key ("Номер рейса")
+create table РђРІРёР°СЂРµР№СЃ (
+   "РќРѕРјРµСЂ СЂРµР№СЃР°"        int                  not null,
+   РђРІРёР°РєРѕРјРїР°РЅРёСЏ         varchar(200)         null,
+   РћС‚РєСѓРґР°               varchar(200)         null,
+   РљСѓРґР°                 varchar(200)         null,
+   "РўРёРї СЃР°РјРѕР»С‘С‚Р°"       varchar(200)         null,
+   Р’С‹Р»РµС‚                datetime             null,
+   РџСЂРёР»С‘С‚               datetime             null,
+   constraint PK_РђР’РРђР Р•Р™РЎ primary key ("РќРѕРјРµСЂ СЂРµР№СЃР°")
 )
 go
 
 /*==============================================================*/
-/* Table: Город                                                 */
+/* Table: Р“РѕСЂРѕРґ                                                 */
 /*==============================================================*/
-create table Город (
-   Название             varchar(200)         not null,
-   constraint PK_ГОРОД primary key (Название)
+create table Р“РѕСЂРѕРґ (
+   РќР°Р·РІР°РЅРёРµ             varchar(200)         not null,
+   constraint PK_Р“РћР РћР” primary key (РќР°Р·РІР°РЅРёРµ)
 )
 go
 
 /*==============================================================*/
-/* Table: "Тип самолёта"                                        */
+/* Table: "РўРёРї СЃР°РјРѕР»С‘С‚Р°"                                        */
 /*==============================================================*/
-create table "Тип самолёта" (
-   "Тип самолёта"       varchar(200)         not null,
-   "Количество пассажиров" int                  null
-      constraint "CKC_КОЛИЧЕСТВО ПАССАЖ_ТИП САМО" check ("Количество пассажиров" is null or ("Количество пассажиров" between 10 and 9000)),
-   constraint "PK_ТИП САМОЛЁТА" primary key ("Тип самолёта")
+create table "РўРёРї СЃР°РјРѕР»С‘С‚Р°" (
+   "РўРёРї СЃР°РјРѕР»С‘С‚Р°"       varchar(200)         not null,
+   "РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ" int                  null
+      constraint "CKC_РљРћР›РР§Р•РЎРўР’Рћ РџРђРЎРЎРђР–_РўРРџ РЎРђРњРћ" check ("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ" is null or ("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°СЃСЃР°Р¶РёСЂРѕРІ" between 10 and 9000)),
+   constraint "PK_РўРРџ РЎРђРњРћР›РЃРўРђ" primary key ("РўРёРї СЃР°РјРѕР»С‘С‚Р°")
 )
 go
 
-alter table Авиарейс
-   add constraint "FK_АВИАРЕЙС_REFERENCE_ТИП САМО" foreign key ("Тип самолёта")
-      references "Тип самолёта" ("Тип самолёта")
+alter table РђРІРёР°СЂРµР№СЃ
+   add constraint "FK_РђР’РРђР Р•Р™РЎ_REFERENCE_РўРРџ РЎРђРњРћ" foreign key ("РўРёРї СЃР°РјРѕР»С‘С‚Р°")
+      references "РўРёРї СЃР°РјРѕР»С‘С‚Р°" ("РўРёРї СЃР°РјРѕР»С‘С‚Р°")
 go
 
-alter table Авиарейс
-   add constraint "FK_АВИАРЕЙС_КАКОЙ АВИ_АВИАКОМП" foreign key (Авиакомпания)
-      references Авиакомпания (Название)
+alter table РђРІРёР°СЂРµР№СЃ
+   add constraint "FK_РђР’РРђР Р•Р™РЎ_РљРђРљРћР™ РђР’Р_РђР’РРђРљРћРњРџ" foreign key (РђРІРёР°РєРѕРјРїР°РЅРёСЏ)
+      references РђРІРёР°РєРѕРјРїР°РЅРёСЏ (РќР°Р·РІР°РЅРёРµ)
          on update cascade
 go
 
-alter table Авиарейс
-   add constraint FK_АВИАРЕЙС_КУДА_ГОРОД foreign key (Куда)
-      references Город (Название)
+alter table РђРІРёР°СЂРµР№СЃ
+   add constraint FK_РђР’РРђР Р•Р™РЎ_РљРЈР”Рђ_Р“РћР РћР” foreign key (РљСѓРґР°)
+      references Р“РѕСЂРѕРґ (РќР°Р·РІР°РЅРёРµ)
 go
 
-alter table Авиарейс
-   add constraint FK_АВИАРЕЙС_ОТКУДА_ГОРОД foreign key (Откуда)
-      references Город (Название)
+alter table РђРІРёР°СЂРµР№СЃ
+   add constraint FK_РђР’РРђР Р•Р™РЎ_РћРўРљРЈР”Рђ_Р“РћР РћР” foreign key (РћС‚РєСѓРґР°)
+      references Р“РѕСЂРѕРґ (РќР°Р·РІР°РЅРёРµ)
 go
 
